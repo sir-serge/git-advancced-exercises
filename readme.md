@@ -1,6 +1,6 @@
 
 ###git rebase and git amend
-,,,bash
+```bash
 gymiriba@Iribas-iMac git-advancced-exercises % git rebase --abort      
 gymiriba@Iribas-iMac git-advancced-exercises % git rebase -i HEAD~3    
 Successfully rebased and updated refs/heads/main.
@@ -51,4 +51,31 @@ remote: Resolving deltas: 100% (2/2), done.
 To https://github.com/sir-serge/git-advancced-exercises.git
  * [new branch]      main -> main
 gymiriba@Iribas-iMac git-advancced-exercises % 
-,,,
+```
+
+
+### squashing 
+
+```bash
+gymiriba@Iribas-iMac git-advancced-exercises % git rebase -i --root
+[detached HEAD db40425] creating intial file
+ Date: Mon Mar 10 12:58:46 2025 +0200
+ Committer: Gym Iriba <gymiriba@Iribas-iMac.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1.md
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+gymiriba@Iribas-iMac git-advancced-exercises % 
+```
